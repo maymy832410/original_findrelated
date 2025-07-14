@@ -269,4 +269,5 @@ with gr.Blocks() as demo:
     update_btn.click(fn=manual_crossref_update, inputs=[update_pw], outputs=[update_status])
 
 if __name__ == "__main__":
-    demo.launch(share=False)
+    app.launch(server_name="0.0.0.0", server_port=int(os.environ.get("PORT", 8080)))
+
